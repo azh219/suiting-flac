@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5ed">
+  <meta name="description" content="随听 FLAC：在 Mac 上将支持的本地 MFLAC 音频还原为 FLAC，批量处理、完整校验，保留你的原文件。">
+  <title>随听 FLAC · 把好音乐带上路</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./site-config.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="随听 FLAC 首页">
+      <svg class="brand-icon" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="13" fill="currentColor"/><g stroke="#b4f0b8" stroke-width="2.5" stroke-linecap="round"><path d="M10 18v4M15 13v14M20 9v22M25 15v10M30 18v4"/></g></svg>
+      <span>随听 <span class="brand-format">FLAC</span></span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#how">怎么用</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-download" href="#download">下载工具 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> MAC 版现已提供 · 1.0</p>
+        <h1 id="hero-title">把好音乐<br>带上<span class="title-mark">路。</span></h1>
+        <p class="hero-description">让下载的音乐，回到本地文件。<br>将支持的 MFLAC 还原为 FLAC，<br class="desktop-break">留给车载 USB，也留给你的音乐库。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#download">下载 Mac 版 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#how">了解使用方式 <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hero-note">Apple 芯片 · macOS 13+ · 需要 Python 3.9+</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit-label">GOOD MUSIC, ON YOUR OWN TERMS.</div>
+        <div class="record-shadow"></div>
+        <div class="record">
+          <div class="record-grooves"></div>
+          <div class="record-label"><span>随听</span><b>FLAC</b><small>LOCAL AUDIO / VOL. 01</small><i></i></div>
+        </div>
+        <div class="sound-card">
+          <div class="sound-card-top"><span>保留原始音频</span><span class="tiny-light"></span></div>
+          <svg class="waveform" viewBox="0 0 288 72" fill="none"><g stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M4 32v8M13 27v18M22 20v32M31 26v20M40 16v40M49 8v56M58 14v44M67 23v26M76 29v14M85 19v34M94 11v50M103 4v64M112 10v52M121 21v30M130 27v18M139 17v38M148 7v58M157 13v46M166 25v22M175 29v14M184 19v34M193 11v50M202 18v36M211 26v20M220 31v10M229 24v24M238 16v40M247 23v26M256 29v14M265 25v22M274 30v12M283 33v6"/></g></svg>
+          <div class="sound-card-bottom"><b>.mflac <span>→</span> .flac</b><span>原样还原</span></div>
+        </div>
+        <div class="art-caption">YOUR MUSIC. YOUR NEXT STOP.</div>
+      </div>
+    </section>
+
+    <div class="proof-strip wrap" aria-label="主要功能">
+      <span><i aria-hidden="true">↳</i> 本地处理音频</span>
+      <span><i aria-hidden="true">≋</i> 支持批量转换</span>
+      <span><i aria-hidden="true">✓</i> PCM 完整性校验</span>
+      <span><i aria-hidden="true">＋</i> 保留原始文件</span>
+    </div>
+
+    <section id="how" class="section wrap" aria-labelledby="how-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">从下载，到出发</p><h2 id="how-title">三步，收好你的音乐。</h2></div>
+        <p>音频始终在本机处理。<br>当前加密文件的密钥获取需要联网。</p>
+      </div>
+      <ol class="steps">
+        <li><span class="step-number">01</span><h3>先把歌曲下载好</h3><p>在 Mac 的 QQ 音乐中下载 SQ 音质歌曲。随听支持特定新版 <code>musicex v1</code> 的 MFLAC 文件。</p><span class="step-caption">下载完成，再进行转换</span></li>
+        <li><span class="step-number">02</span><h3>选择文件与输出位置</h3><p>扫描 QQ 音乐下载目录，或添加文件、文件夹。选择一个目录，保存生成的 FLAC。</p><span class="step-caption">也可以直接拖入文件</span></li>
+        <li><span class="step-number">03</span><h3>转换、校验，带走</h3><p>批量还原音频，并完整解码检查 PCM MD5。完成后，将文件复制到音乐库或车载 USB。</p><span class="step-caption">车载播放请核对车型支持情况</span></li>
+      </ol>
+    </section>
+
+    <section class="feature-section" aria-labelledby="features-title">
+      <div class="wrap feature-layout">
+        <div class="feature-intro"><p class="eyebrow">文件在手，细节也要到位</p><h2 id="features-title">原样还原。<br>认真检查。</h2><p>从受支持的文件中恢复原始 FLAC 数据。无需重新编码，也不会把有损音频“升级”成无损音质。</p><div class="format-path" aria-label="从 MFLAC 还原到 FLAC"><span>MFLAC</span><i aria-hidden="true">→</i><strong>FLAC</strong></div></div>
+        <div class="feature-grid">
+          <article><span class="feature-icon" aria-hidden="true">01 /</span><h3>完成之前，完整校验</h3><p>完整解码音频，核对采样参数、样本数与 PCM MD5。检查通过后，再保存最终文件。</p></article>
+          <article><span class="feature-icon" aria-hidden="true">02 /</span><h3>原文件，原地保留</h3><p>转换结果写入你选择的输出目录。遇到同名目标文件直接跳过，便于逐批整理。</p></article>
+          <article><span class="feature-icon" aria-hidden="true">03 /</span><h3>音频留在本地</h3><p>加密文件转换时，请求 QQ 官方接口获取密钥；文件本身不上传。登录凭据和密钥不写入日志或磁盘。</p></article>
+          <article><span class="feature-icon" aria-hidden="true">04 /</span><h3>结果，一首一首看</h3><p>批量处理时查看每首歌的成功、跳过或失败状态。一首出错，不影响其余文件继续处理。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section wrap" aria-labelledby="download-title">
+      <div class="section-heading"><div><p class="eyebrow">从你的设备开始</p><h2 id="download-title">现在，在 Mac 上随听。</h2></div><p>先把一个平台做好。<br>其他平台正在规划，尚未提供安装包。</p></div>
+      <div class="download-layout">
+        <article class="download-card available">
+          <div class="platform-heading"><div class="device-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="7" width="32" height="25" rx="3" stroke="currentColor" stroke-width="2"/><path d="M5 39h38l-3-7H8l-3 7ZM18 39h12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><span class="badge badge-available">可下载</span></div>
+          <h3>macOS <span>1.0</span></h3><p class="download-subtitle">原生 Mac 应用 · ZIP 安装包</p>
+          <ul class="requirements"><li>Apple 芯片（M 系列）</li><li>macOS 13 或更新版本</li><li>Python 3.9+，无需安装 pip 依赖</li><li>加密文件转换需要有效 QQ 音乐登录态</li></ul>
+          <a id="mac-download" class="button button-primary" href="./downloads/suiting-flac-macos-arm64-v1.0.0.zip" download>下载 Mac 版 <span aria-hidden="true">↓</span></a>
+          <p class="download-footnote">含应用及使用说明。尚未完成 Apple 公证。<br>Intel Mac 暂无安装包。</p>
+        </article>
+        <div class="future-platforms" aria-label="后续平台计划">
+          <article class="platform-row"><span class="platform-symbol" aria-hidden="true">W</span><div><h3>Windows</h3><p>桌面文件管理与批量转换</p></div><span class="badge">规划中</span></article>
+          <article class="platform-row"><span class="platform-symbol" aria-hidden="true">A</span><div><h3>Android</h3><p>文件选择、本地转换与结果导出</p></div><span class="badge">规划中</span></article>
+          <article class="platform-row"><span class="platform-symbol" aria-hidden="true">H</span><div><h3>HarmonyOS NEXT</h3><p>适配原生文件访问与导出流程</p></div><span class="badge">规划中</span></article>
+          <div class="platform-note"><span aria-hidden="true">↗</span><p>以上平台尚无安装包，也没有确定发布日期。<br>网页可在手机浏览器访问，转换功能在应用中运行。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="roadmap-section wrap" aria-labelledby="roadmap-title">
+      <div class="roadmap-intro"><p class="eyebrow">下一首，慢慢做好</p><h2 id="roadmap-title">随听的迭代计划。</h2><p>以下是产品方向，<br>以实际发布的功能为准。</p></div>
+      <ol class="roadmap">
+        <li class="roadmap-current"><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-state">已提供</span><h3>Mac 本地转换</h3><p>批量转换、官方接口取钥、完整校验，以及结果逐项展示。</p></li>
+        <li><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-state">后续计划</span><h3>个人密钥与加密密钥包</h3><p>支持个人密钥导入与加密密钥包。当前公开版不含歌曲密钥，离线还原尚未实现。</p></li>
+        <li><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-state">后续计划</span><h3>更多设备，统一流程</h3><p>逐步适配移动端，并设计可配置的 HTTPS 密钥服务。服务地址、访问规则与发布方式待定。</p></li>
+      </ol>
+    </section>
+
+    <section id="faq" class="section wrap faq-section" aria-labelledby="faq-title">
+      <div><p class="eyebrow">使用之前，你可能想知道</p><h2 id="faq-title">几个常见问题。</h2><p class="faq-intro">把当前能做什么，<br>以及边界，说明白。</p></div>
+      <div class="faq-list">
+        <details open><summary>转换时会向 QQ 音乐发送请求吗？</summary><div class="faq-answer"><p>会。当前处理加密 MFLAC 时，应用会使用本机 QQ 音乐登录凭据与音频资源标识，向 QQ 官方 <code>u.y.qq.com</code> 请求匹配的解密密钥。音频内容在本地处理，不上传；凭据与密钥只在运行时使用，不写入日志或磁盘。</p><p>普通 FLAC 的复制与校验，以及已有同名目标文件的跳过操作，不需要联网。</p></div></details>
+        <details><summary>没有登录 QQ 音乐，可以离线转换吗？</summary><div class="faq-answer"><p>当前版本不能离线还原加密 MFLAC。已获取并匹配的密钥在技术上可以用于本地解密，但本版本没有密钥导入或保存功能。普通 FLAC 可离线复制、校验；已经生成的 FLAC 可以离线播放。</p></div></details>
+        <details><summary>支持所有 QQ 音乐下载格式吗？</summary><div class="faq-answer"><p>目前支持普通 FLAC，以及带有特定 <code>musicex v1</code> 尾部信息的 MFLAC。其他加密格式、旧版变体及 MGG、MP3 等有损格式不在当前支持范围内。即使扩展名相同，仍需以文件检测结果为准。</p></div></details>
+        <details><summary>转成 FLAC 后，音质会变好吗？</summary><div class="faq-answer"><p>转换恢复源文件中的原始 FLAC 数据，不进行重新编码，也不会提升源音质。输出取决于下载时选择的音源与音质。完整校验用于检查文件是否正确还原。</p></div></details>
+        <details><summary>为什么已有的同名文件会被跳过？</summary><div class="faq-answer"><p>为避免覆盖已有文件，随听会跳过输出目录中的同名目标。跳过不代表重新验证过文件来源或完整性。如需重新转换，请选另一个输出目录，或先自行移走已有文件。</p></div></details>
+        <details><summary>FLAC 能直接放进汽车 USB 播放吗？</summary><div class="faq-answer"><p>取决于车型、车机版本、USB 文件系统，以及音频的采样率和位深。请先用一首歌曲在实际车辆上测试，并参考车辆手册。随听负责生成和校验 FLAC，不对所有车机的兼容性作保证。</p></div></details>
+        <details><summary>下载后如何打开？</summary><div class="faq-answer"><p>解压 ZIP，阅读随附的使用说明，再打开「随听 FLAC」应用。请确认你的 Mac 使用 Apple 芯片、系统为 macOS 13 或更新版本，并已安装 Python 3.9+。当前分发包尚未完成 Apple 公证，macOS 可能显示开发者验证提示。</p></div></details>
+      </div>
+    </section>
+
+    <section class="closing wrap" aria-label="下载随听 FLAC"><p>下一程，<br class="mobile-break">让喜欢的歌同行。</p><a class="button button-primary" href="#download">下载随听 FLAC <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer class="site-footer wrap"><div><a class="brand footer-brand" href="./">随听 <span class="brand-format">FLAC</span></a><p>独立本地音频工具，与 QQ 音乐、腾讯无隶属关系。</p></div><div class="footer-links"><a href="#faq">使用说明</a><a id="repo-link" href="#" hidden>GitHub <span aria-hidden="true">↗</span></a><a href="#main">回到顶部 ↑</a></div></footer>
+</body>
+</html>
