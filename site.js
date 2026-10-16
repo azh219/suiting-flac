@@ -36,4 +36,54 @@
     repository.href = repositoryUrl;
     repository.hidden = false;
   }
+
+  const comments = config.comments || {};
+  const loadButton = document.getElementById("load-comments");
+  const commentsStatus = document.getElementById("comments-status");
+  const commentsWidget = document.getElementById("comments-widget");
+  const validId = value => typeof value === "string" && /^[A-Za-z0-9_-]{4,128}$/.test(value);
+  if (loadButton && commentsStatus && commentsWidget &&
+      comments.repo === "azh219/suiting-flac" && validId(comments.repoId) &&
+      validId(comments.categoryId) && comments.category === "Announcements") {
+    loadButton.hidden = false;
+    commentsStatus.textContent = "点击加载评论，通过 giscus 连接 GitHub Discussions。";
+    loadButton.addEventListener("click", () => {
+      loadButton.disabled = true;
+      commentsStatus.textContent = "正在加载评论；也可以直接在 GitHub 参与讨论。";
+      const script = document.createElement("script");
+      script.src = "https://giscus.app/client.js";
+      const attributes = {
+        "data-repo": comments.repo,
+        "data-repo-id": comments.repoId,
+        "data-category": comments.category,
+        "data-category-id": comments.categoryId,
+        "data-mapping": "specific",
+        "data-term": "suiting-flac-community",
+        "data-strict": "1",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-input-position": "top",
+        "data-theme": "light",
+        "data-lang": "zh-CN",
+        "crossorigin": "anonymous"
+      };
+      Object.entries(attributes).forEach(([name, value]) => script.setAttribute(name, value));
+      script.async = true;
+      const slowTimer = setTimeout(() => {
+        commentsStatus.textContent = "评论加载较慢，可通过右侧链接在 GitHub 查看和留言。";
+      }, 15000);
+      script.onload = () => {
+        clearTimeout(slowTimer);
+        loadButton.hidden = true;
+        commentsStatus.textContent = "评论由 GitHub Discussions 提供；若未显示，可直接在 GitHub 参与。";
+      };
+      script.onerror = () => {
+        clearTimeout(slowTimer);
+        script.remove();
+        loadButton.disabled = false;
+        commentsStatus.textContent = "暂时无法加载评论。可以重试，或直接在 GitHub 参与讨论。";
+      };
+      commentsWidget.appendChild(script);
+    });
+  }
 })();

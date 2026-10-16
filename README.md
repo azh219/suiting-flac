@@ -15,4 +15,6 @@
 
 ## 网站维护
 
-GitHub Pages 从 main 分支根目录发布。更新版本下载地址时修改 `site-config.js`；页面为纯静态 HTML、CSS、JavaScript，无外部字体或分析服务依赖。
+GitHub Pages 从 main 分支根目录发布。更新版本下载地址时修改 `site-config.js`；页面为纯静态 HTML、CSS、JavaScript，无外部字体或分析服务依赖。评论采用 giscus + GitHub Discussions，访客点击“加载评论”后才连接 giscus；通过 GitHub 登录后参与。
+
+评论设置位于 `site-config.js`，所有参数都是公开标识，不包含访问令牌。Discussions 由仓库维护者在 GitHub 管理。
